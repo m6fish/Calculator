@@ -14,7 +14,6 @@ for(var i = 0; i < keys.length; i++) {
 		// Now, just append the key values (btnValue) to the input string and finally use javascript's eval function to get the result
 		// If clear key is pressed, erase everything
 		if(btnVal == 'C') {
-            //input.className = 'fade';
 			input.innerHTML = '';
 			decimalAdded = false;
 		}
@@ -29,7 +28,7 @@ for(var i = 0; i < keys.length; i++) {
 			
 			// Final thing left to do is checking the last character of the equation. If it's an operator or a decimal, remove it
 			if(operators.indexOf(lastChar) > -1 || lastChar == '.')
-				equation = equation.replace(/.$/, ''); // any( . ) last( $ )
+				equation = equation.replace(/.$/, '');
 			
 			if(equation)
 				input.innerHTML = eval(equation);
